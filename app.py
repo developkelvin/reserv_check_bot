@@ -29,7 +29,11 @@ def message():
 
         data_send = {
             "message": {
-                'text': '현재 예약 가능 수는 ' + str(num_of_reservation) + '개 입니다.'
+                'text': '현재 예약 가능 수는 ' + str(num_of_reservation) + '개 입니다. ',
+                "message_button": {
+                    "label": "바로가기",
+                    "url": "https://www.digital-blacksmithshop.com:46115/program/calendar/1?y=2018&m=12"
+                }
             },
             'keyboard': {
                 "type": "buttons",
@@ -60,4 +64,4 @@ def message():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
